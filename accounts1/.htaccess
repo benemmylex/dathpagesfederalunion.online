@@ -1,0 +1,28 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Rewrite requests like /file to /file.php if the file exists
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Deny execution of PHP files in this directory (good for uploads)
+<FilesMatch "\.(php|php5|phtml)$">
+    Deny from all
+</FilesMatch>
+
+# Only allow images and PDF access
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes
+
+# Disable PHP execution in this folder
+php_flag engine off
+
+# Allow CORS (useful if needed for frontend)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>

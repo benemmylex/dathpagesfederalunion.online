@@ -1,0 +1,46 @@
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#</IfModule>
+
+#<Files ~ "^\w+\.(gif|jpe?g|png)$">
+#order deny,allow
+#allow from all
+#</Files>
+
+
+
+#<IfModule mod_headers.c>
+#  Header set Access-Control-Allow-Origin "*"
+#</IfModule>
+
+
+# Block bad bots by user-agent
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+
+# List of user agents to block
+#RewriteCond %{HTTP_USER_AGENT} ^.*(AhrefsBot|SemrushBot|MJ12bot|DotBot|Baiduspider|YandexBot|PetalBot|Sogou|crawler|spider|bot).*$ [NC]
+#RewriteRule .* - [F,L]
+#</IfModule>
+
+
+RewriteEngine On
+
+# Redirect all traffic to app.dathpagefederalunion.online
+#RewriteCond %{HTTP_HOST} !^app\.dathpagefederalunion\.online$ [NC]
+#RewriteRule ^.*$ https://app.dathpagefederalunion.online/ [R=301,L]
+
+# Allow CORS
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# Block bad bots by user-agent
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_USER_AGENT} ^.*(AhrefsBot|SemrushBot|MJ12bot|DotBot|Baiduspider|YandexBot|PetalBot|Sogou|crawler|spider|bot).*$ [NC]
+  RewriteRule .* - [F,L]
+</IfModule>
+
+
