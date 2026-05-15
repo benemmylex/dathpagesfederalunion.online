@@ -20,7 +20,7 @@ $web_email = WEB_EMAIL;
 function dbConnect(){
     $servername = "localhost";
     //Change Database Username "root"fast_
-    $username = "rapiditi_dathpagefederalunion_online"; 
+    $username = "rapiditi_dathpagesfederalunion_online"; 
     //Change Database Password ""
     $password = "dathpagesfederalunion.online";
     //Change Database ""
