@@ -33,7 +33,7 @@ unset($_SESSION['wire_transfer'], $_SESSION['dom_transfer']);
 <!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
-_smartsupp.key = '79fbf51563cc6e087a3395fd04cec1f8fdc35ba6';
+_smartsupp.key = '735c5056016dc945f7c0db4cde55e1c349e8f8ef';
 window.smartsupp||(function(d) {
   var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
   s=d.getElementsByTagName('script')[0];c=d.createElement('script');

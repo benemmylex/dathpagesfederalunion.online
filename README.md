@@ -51,4 +51,4 @@ We are not responsible for any illegal use of this script. ******
 
 
 
-# fast.dathpagefederalunion.online
+# dathpagesfederalunion.online
