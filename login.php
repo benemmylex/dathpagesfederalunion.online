@@ -367,8 +367,8 @@ if (isset($_POST['acct_login'])) {
 					</div>
 					<div class="modal-body">
 						Invalid Login Details. If you have forgotten your password, please send a mail to
-						<a href="mailto:support@dathpagefederalunion.online.online" class="text-primary">
-							support@dathpagefederalunion.online.online						</a>
+						<a href="mailto:support@dathpagesfederalunion.online.online" class="text-primary">
+							support@dathpagesfederalunion.online.online						</a>
 					</div>
 					<div class="modal-footer">
 						<div class="btn-inline">

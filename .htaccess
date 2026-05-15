@@ -1,8 +1,8 @@
-#<IfModule mod_rewrite.c>
-#RewriteEngine On
-#RewriteCond %{HTTPS} !=on
-#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-#</IfModule>
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
 
 #<Files ~ "^\w+\.(gif|jpe?g|png)$">
 #order deny,allow
@@ -28,9 +28,9 @@
 
 RewriteEngine On
 
-# Redirect all traffic to app.dathpagefederalunion.online
+# Redirect all traffic to app.dathpagesfederalunion.online
 #RewriteCond %{HTTP_HOST} !^app\.dathpagefederalunion\.online$ [NC]
-#RewriteRule ^.*$ https://app.dathpagefederalunion.online/ [R=301,L]
+#RewriteRule ^.*$ https://app.dathpagesfederalunion.online/ [R=301,L]
 
 # Allow CORS
 <IfModule mod_headers.c>
